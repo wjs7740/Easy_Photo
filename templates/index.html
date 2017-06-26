@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8" />
+<title>照片墙</title>
+<!-- js_error begin -->
+<SCRIPT language=javascript>
+<!--
+window.onerror=function(){return true;}
+// -->
+</SCRIPT>
+<!-- js_error end -->
+
+<!-- 去掉这3行，则点击直接显示原图，如果移动至下面则IE浏览器报错 begin -->
+<script type='text/javascript' src= "{{ url_for('static', filename='js/jquery.js') }}" ></script>
+<script type='text/javascript' src= "{{ url_for('static', filename='js/jquery.scripts.js') }}" ></script>
+<script type='text/javascript' src= "{{ url_for('static', filename='js/jquery.custom.js') }}" ></script>
+<!-- 去掉这3行，则点击直接显示原图，如果移动至下面则IE浏览器报错 end -->
+
+<link rel="stylesheet" type="text/css" media="all" href= "{{ url_for('static', filename='css/style.min.css') }}" />
+
+</head>
+<body>
+ 
+<div id="slideshow-wrapper">
+    <div id="slideshow-pattern" class="subheader-pattern-dot"></div>
+    <div id="slideshow-border-top">
+        <div id="gallery-slider-wrapper">
+            <div id="gallery-slider">
+            <div id="slider-controls"><a href="javascript: void(0)" id="slider-control-left">left</a><a href="javascript: void(0)" id="slider-control-right">right</a></div>
+                <div id="slider-images-wrapper">
+                    <ul id="slider-main-ul">
+
+<!-- 3dwall_001 begin -->
+                        <li><ul><li class="type-3"><a class="image-icon" rel="gallery[modal]" title="html6game" src= "{{ url_for('static', filename='001/001.jpg') }}" ><span><div class="icon"></div><strong>html6game 3dwall 001</strong>html53d墙,3d墙,3d立方体,3d图片墙,3d，3d wall,wall,三维,三维图片墙 - 前端开发网 - 专注于网页游戏，为程序员提供web开发教程，这里有最近的资讯和前沿的开发技术！O(∩_∩)O ...<em class="more">查看图片 &#187;</em></span><img height="298" width="318" src= "{{ url_for('static', filename='001/001a.jpg') }}" alt="请查看图片"></a></li>
+
+                        <li class="type-1"><a class="image-icon" rel="gallery[modal]" title="PKMN：Magikarp" src= "{{ url_for('static', filename='001/002.jpg') }}"><span><div class="icon"></div><strong>PKMN：Magikarp</strong><em class="more">查看图片 &#187;</em></span><img height="148" width="158" src= "{{ url_for('static', filename='001/002a.jpg') }}" alt="请查看图片"></a></li>
+
+                        <li class="type-1"><a class="image-icon" rel="gallery[modal]" title="食品艺术 - 羊" src= "{{ url_for('static', filename='001/003.jpg') }}"><span><div class="icon"></div><strong>食品艺术 - 羊</strong><em class="more">查看图片 &#187;</em></span><img height="148" width="158" src= "{{ url_for('static', filename='001/003a.jpg') }}" alt="请查看图片"></a></li></ul></li>
+<!-- 3dwall_001 end -->
+<!-- 3dwall_002 begin -->
+
+
+                    </ul>
+                </div>
+            <div id="slider-bottom-controls"><a id="slider-scroll-left" href="javascript: void(0);" title="前端开发网">left</a><div id="slider-scroll"><div class="knob"></div></div><a id="slider-scroll-right" href="javascript: void(0);" title="前端开发网">right</a></div>
+            </div>
+        </div>                               
+    <!-- end of slideshow border top -->
+    </div>                  
+<!-- end of slideshow wrapper -->
+</div>
+
+<script type='text/javascript' src= "{{ url_for('static', filename='js/mootools.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/duotive-slider-gallery.js') }}"></script>
+
+<script type="text/javascript">
+    //首页banner图展示init
+	window.addEvent("load", function(){
+	var dtSlideshow = new dtSliderGallery({container: $("gallery-slider"),arrowControls: 1,description: 1,transitionDuration: 1000,transitionInterval: 15000});});
+   /** 无限滚动
+   function getTmplData() {
+        jQuery.get("/web/idol/rest/" + jQuery('#pageNo').val() + "/0",
+            function(data) {
+                for (var i = 0; i < data.items.length; i++ ) {
+                    jQuery('#idol_tmpl').tmpl(data.items[i]).appendTo('#main_container');
+                }
+                
+                jQuery('#pageNo').val(parseInt(jQuery('#pageNo').val()) + 1);
+       });
+   }
+
+    jQuery(window).bind("scroll",function() {
+        // 然后判断窗口的滚动条是否接近页面底部
+        if (jQuery(document).scrollTop() + jQuery(window).height() > jQuery(document).height() - 20) {
+        	if (jQuery('#pageNo').val() < 3) {
+        		getTmplData();
+        	}
+        }
+    }) **/
+</script>
+</body>
+</html>
